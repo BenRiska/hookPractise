@@ -22,7 +22,7 @@ const Character = (props) => {
       "Sending Http request for new character with id " + props.selectedChar
     );
     setIsLoading(true);
-    fetch("https://swapi.co/api/people/" + props.selectedChar)
+    fetch("https://swapi.dev/api/people/" + props.selectedChar)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Could not fetch person!");

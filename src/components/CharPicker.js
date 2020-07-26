@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import "./CharPicker.css";
-
 const CharPicker = (props) => {
   const [loadedChars, setLoadedChars] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +7,7 @@ const CharPicker = (props) => {
   useEffect(() => {
     console.log("useEffect runs");
     setIsLoading(true);
-    fetch("https://swapi.co/api/people")
+    fetch("https://swapi.dev/api/people/")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch.");
