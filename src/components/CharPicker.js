@@ -5,14 +5,16 @@ class CharPicker extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch("https://swapi.co/api/people")
+    fetch("https://swapi.dev/api/people/")
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error("Failed to fetch.");
         }
         return response.json();
       })
       .then((charData) => {
+        console.log("should be working");
         const selectedCharacters = charData.results.slice(0, 5);
         this.setState({
           characters: selectedCharacters.map((char, index) => ({
