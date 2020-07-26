@@ -47,7 +47,7 @@ const App = (props) => {
 
 export default App;
 
-/* import React, { useState } from "react";
+/*  import React, { useState } from "react";
 
 import CharPicker from "./components/CharPicker";
 import Character from "./components/Character";
